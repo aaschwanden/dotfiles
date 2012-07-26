@@ -1,0 +1,83 @@
+#  Default .bash_profile file for pacman 
+#  Users are expected to edit this file to meet their own needs.
+#************************************************************************
+#   MODIFICATION HISTORY (PLEASE LOG CHANGES)
+#************************************************************************
+# Modified:
+# 2010-03-30 ONN  Initial version for pacman
+# 2010-06-01 AA   PISM related changes
+#************************************************************************
+
+# execute .bashrc if the file exists
+if [ -f ~/.bashrc ]; then
+      . ~/.bashrc
+fi
+
+# The following example illustrates how to extend your path
+# to add additional libraries and executables to your shell default path
+#export PATH=${PATH}:/usr/local/bin:/usr/local/pkg/ferret/ferret-6.4/bin
+
+# set for invoking ksh to give access to modules
+export ENV=$HOME/.kshrc
+
+# check if this is an interactive session
+/usr/bin/tty -s
+if [ 0 = $? ]; then
+
+
+# Setup prompt appearance
+host=`uname -n`
+PS1="$host % "
+export PS1
+fi
+EDITOR=/usr/bin/vim; export EDITOR
+
+# Umask 'masks off' default permission bits. 
+umask 077
+
+HISTSIZE=1000; export HISTSIZE
+
+# Load default modules to setup default programming environment
+module unload PrgEnv-pgi
+module unload openmpi/pgi
+module unload pgi
+
+module load PrgEnv-gnu
+module load cmake/2.8.7
+module load petsc/3.2-p3.gnu.opt 
+module load /usr/local/pkg/modulefiles/python/2.7.2
+module load nco/4.1.0
+module load autoconf
+module load automake
+
+# User specific aliases and functions
+
+alias al='alias'
+alias cls='clear'
+alias hi='history'
+alias la='ls -a'
+alias ll='ls -lg'
+alias lh='ls -lh'
+alias ncv='ncview -minmax all'
+alias nch='ncdump -h'
+alias astat='qstat -a -s |grep aschw'
+
+export PISM_USE_GNU_FLAGS=1
+export PATH=~/pism-dev/bin/:~/pism-dev/util/:~/local/bin:$PATH
+export PYNGL_COLORMAPS=/wrkdir/aschwand/efgis/scripts
+
+# list currently loaded modules
+module list
+
+echo 'PETSC_DIR = ' ${PETSC_DIR}
+echo 'PETSC_ARCH = ' ${PETSC_ARCH}
+echo 'PATH = ' ${PATH}
+
+
+###
+# PISM STuff
+###
+export PISM_PREFIX=~/pism-dev/bin/
+export PISM_DO=echo
+export PISM_MPIDO='mpirun -np'
+
