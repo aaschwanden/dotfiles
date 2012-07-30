@@ -19,6 +19,12 @@ swig-python \
 mercurial \
 cdo \
 py27-cython \
+py27-pil \
 py27-ipython +parallel +pyqt4 \
 py27-scipy \
 py27-sip \
+xorg \
+udunits \
+udunits2 \
+bzr \
+boost
