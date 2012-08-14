@@ -10,6 +10,7 @@ fftw-3 \
 proj \
 py27-pyproj \
 py27-pandas \
+py27-scikits-statsmodels \
 qgis +grass +python27 \
 nco \
 ncview \
