@@ -9,12 +9,13 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # alias
 alias nch='ncdump -h'
-alias ncv='~/local/bin/ncview -minmax all'
+alias ncv='ncview -minmax all'
 alias lh='ls -lh'
 alias ipy='ipython'
+alias cryomac='ssh -XY cryomac.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@marmaduke.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman.arsc.edu"
-alias idv="/Applications/IDV_3.0/runIDV"
+alias idv="/Applications/IDV/runIDV"
 
 # PETSc stuff
 export PETSC_DIR=~/petsc-3.2

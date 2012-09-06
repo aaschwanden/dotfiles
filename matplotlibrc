@@ -1,0 +1,2 @@
+mathtext.fontset: stixsans
+backend: Qt4Agg
