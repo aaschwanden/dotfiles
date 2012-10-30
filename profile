@@ -39,4 +39,4 @@ export PISM_REVISION=testing
 export PISM_DO=echo
 
 # MacPorts QGIS installation with python bindings
-export PYTHONPATH=/Applications/MacPorts/QGIS.app/Contents/Resources/python
+export PYTHONPATH=/Applications/MacPorts/QGIS.app/Contents/Resources/python:~/pism-dev/lib/python2.7/site-packages
