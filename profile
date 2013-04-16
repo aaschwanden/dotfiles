@@ -14,15 +14,15 @@ alias lh='ls -lh'
 alias ipy='ipython'
 alias cryomac='ssh -XY cryomac.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@marmaduke.gi.alaska.edu'
-alias pacman="ssh -XY aschwand@pacman.arsc.edu"
+alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
 
 # PETSc stuff
-export PETSC_DIR=~/petsc-3.2
-export PETSC_ARCH=ompi-opt
+export PETSC_DIR=~/petsc-3.3
+export PETSC_ARCH=ompi-opt-fc
 
 # additional path
-export PATH=$PETSC_DIR/$PETSC_ARCH/bin/:~/pism-dev/bin:~/pism-dev/util:~/pism-dev/test:~/base/ice/util:/usr/texbin/:~/bin:/usr/local/krb5/bin:/usr/local/ossh/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export PATH=~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism-dev/bin:~/pism-dev/util:~/pism-dev/test:~/base/ice/util:/usr/texbin/:~/bin:/usr/local/krb5/bin:/usr/local/ossh/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 export XFILESEARCHPATH=/usr/X11R6/lib/X11/app-defaults/%N:/opt/local/lib/X11/appdefaults/%N
 
 # for bash completion
