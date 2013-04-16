@@ -13,7 +13,7 @@ alias ncv='ncview -minmax all'
 alias lh='ls -lh'
 alias ipy='ipython'
 alias cryomac='ssh -XY cryomac.gi.alaska.edu'
-alias marmaduke='ssh -XY aaschwanden@marmaduke.gi.alaska.edu'
+alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
 
@@ -39,4 +39,4 @@ export PISM_REVISION=testing
 export PISM_DO=echo
 
 # MacPorts QGIS installation with python bindings
-export PYTHONPATH=/Applications/MacPorts/QGIS.app/Contents/Resources/python
+export PYTHONPATH=/Applications/MacPorts/QGIS.app/Contents/Resources/python:~/pism-dev/lib/python2.7/site-packages
