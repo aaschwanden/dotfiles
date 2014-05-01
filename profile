@@ -28,7 +28,7 @@ export PETSC_ARCH=macosx
 #source ~/FEniCS/share/fenics/fenics.conf 
 
 # additional path
-export PATH=~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:~/pism/test:~/base/ice/util:/usr/texbin/:~/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export PATH=~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:~/pism/test:~/base/ice/util:/usr/texbin/:~/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql93/bin:$PATH
 export XFILESEARCHPATH=/usr/X11R6/lib/X11/app-defaults/%N:/opt/local/lib/X11/appdefaults/%N
 
 # for bash completion
