@@ -19,7 +19,7 @@ alias idv="/Applications/IDV/runIDV"
 #export CC=/opt/local/bin/openmpicc
 #export CXX=/opt/local/bin/openmpicxx
 
-export PYTHONPATH=~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
+export PYTHONPATH=~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
 
 # PETSc stuff
 export PETSC_DIR=~/petsc
