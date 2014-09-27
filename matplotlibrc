@@ -1,2 +1,5 @@
-mathtext.fontset: stixsans
+font.sans-serif : Helvetica
+font.family: Helvetica
+#font.sans-serif     : Palatino, Helvetica, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+#mathtext.fontset: stixsans
 backend: Qt4Agg
