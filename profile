@@ -7,7 +7,7 @@ alias cdp='cd ~/pism/'
 alias nch='ncdump -h'
 alias ncv='ncview -minmax all'
 alias lh='ls -lh'
-alias ipy='ipython qtconsole --matplotlib &'
+alias ipy='ipython qtconsole --matplotlib=qt &'
 alias cryomac='ssh -XY cryomac.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
