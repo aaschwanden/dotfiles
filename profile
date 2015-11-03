@@ -7,7 +7,7 @@ alias cdp='cd ~/pism/'
 alias nch='ncdump -h'
 alias ncv='ncview -minmax all'
 alias lh='ls -lh'
-alias ipy='ipython qtconsole --pylab &'
+alias ipy='ipython qtconsole --matplotlib &'
 alias cryomac='ssh -XY cryomac.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
@@ -41,11 +41,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
 export PISM_REVISION=testing
 export PISM_DO=echo
 
-##
-# Your previous /Users/andy/.profile file was backed up as /Users/andy/.profile.macports-saved_2014-03-05_at_09:55:00
-##
-
-# MacPorts Installer addition on 2014-03-05_at_09:55:00: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# MacPorts Installer addition on 2015-10-27_at_11:21:17: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 

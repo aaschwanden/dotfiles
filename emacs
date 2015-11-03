@@ -68,3 +68,5 @@ for skipping in latex mode.")
     (goto-char end)
     (newline)
     (goto-char start)))
+
+(global-unset-key (kbd "C-x C-c"))
