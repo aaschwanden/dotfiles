@@ -12,7 +12,9 @@ alias ipy='ipython qtconsole --matplotlib=qt &'
 alias cryomac='ssh -XY salbitschjien.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
-alias pleiades="ssh -t aaschwan@pfe20.nas.nasa.gov 'bash -l'"
+alias pleiades="ssh -t aaschwan@pfe 'bash -l'"
+alias lou="ssh -t aaschwan@lou 'bash -l'"
+alias ldan="ssh -t aaschwan@ldan9 'bash -l'"
 alias fish="ssh -XY aschwand@fish2.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
 
