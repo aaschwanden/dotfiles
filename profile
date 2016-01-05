@@ -8,7 +8,7 @@ alias cdp='cd ~/pism/'
 alias nch='ncdump -h'
 alias ncv='ncview -minmax all'
 alias lh='ls -lh'
-alias ipy='ipython qtconsole --matplotlib=qt &'
+alias ipy='ipython qtconsole  &'
 alias cryomac='ssh -XY salbitschjien.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
@@ -23,6 +23,7 @@ alias idv="/Applications/IDV/runIDV"
 #export CC=/opt/local/bin/openmpicc
 #export CXX=/opt/local/bin/openmpicxx
 
+export GDAL_DATA=/opt/local/share/gdal
 export PYTHONPATH=~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
 
 # PETSc stuff
