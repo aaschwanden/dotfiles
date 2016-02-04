@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(setq exec-path (append exec-path '("/Library/TeX/texbin/")) )
+(add-to-list 'exec-path "/Library/TeX/texbin")
+(setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
