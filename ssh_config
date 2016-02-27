@@ -1,0 +1,71 @@
+ForwardX11 yes
+
+Host *github.com
+   ForwardX11 no
+
+Host pacman
+PubkeyAuthentication yes
+Hostname pacman.arsc.edu
+
+Host fish
+PubkeyAuthentication yes
+Hostname fish.arsc.edu
+
+Host icebridge 
+Hostname icebridge.sr.unh.edu
+User bmachuser
+Localforward 5433 localhost:5432
+
+#Host pfe pfe-last pfe.nas.nasa.gov pfe-last.nas.nasa.gov
+#ProxyCommand ssh aaschwan@sfe3.nas.nasa.gov /usr/local/bin/ssh-balance %h
+#HostKeyAlias pfe20.nas.nas.gov
+#HostbasedAuthentication no
+
+Host sfe
+        # Replace sfe3 with sfe1 or sfe2 if sfe3 is unavailable, and 
+        # public key authorization is set up on the SFE you want to switch to
+        HostName		sfe3.nas.nasa.gov
+
+Host sfe sfe?.nas.nasa.gov
+	Ciphers			aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,aes192-cbc,aes256-cbc
+	ForwardAgent		no
+	MACs			hmac-sha1
+        ServerAliveInterval     5m
+
+Host sfe sfe?.nas.nasa.gov dmzfs?.nas.nasa.gov sup*.nas.nasa.gov
+	LogLevel		info
+	ProxyCommand		none
+
+Host pfe pfe-last pfe.nas.nasa.gov pfe-last.nas.nasa.gov
+	HostKeyAlias		pfe20.nas.nasa.gov
+	ProxyCommand		ssh -oCompression=no sfe /usr/local/bin/ssh-balance %h
+
+Host bridge bridge-last bridge.nas.nasa.gov bridge-last.nas.nasa.gov
+        HostKeyAlias            pfe20.nas.nasa.gov
+        ProxyCommand            ssh -oCompression=no sfe /usr/local/bin/ssh-balance %h
+
+Host lfe lfe-last lfe.nas.nasa.gov lfe-last.nas.nasa.gov
+        HostKeyAlias            lfe1.nas.nasa.gov
+        ProxyCommand            ssh -oCompression=no sfe /usr/local/bin/ssh-balance %h
+
+Host lou lou-last lou.nas.nasa.gov lou-last.nas.nasa.gov
+        HostKeyAlias            lfe1.nas.nasa.gov
+        ProxyCommand            ssh -oCompression=no sfe /usr/local/bin/ssh-balance %h
+
+Host lou2 lou2-last lou2.nas.nasa.gov lou2-last.nas.nasa.gov
+        HostKeyAlias            lfe1.nas.nasa.gov
+        ProxyCommand            ssh -oCompression=no sfe /usr/local/bin/ssh-balance %h
+
+Host ldan ldan-last ldan.nas.nasa.gov ldan-last.nas.nasa.gov
+        HostKeyAlias            lfe1.nas.nasa.gov
+        ProxyCommand            ssh -oCompression=no sfe /usr/local/bin/ssh-balance %h
+
+# Add additional hosts to the list below as needed
+Host *.nas.nasa.gov lou lou? ldan ldan? lfe? pfe?? ?fe bridge bridge? *-last mfe?
+        ForwardAgent            yes       
+	HostbasedAuthentication	no
+	Protocol		2
+	ProxyCommand		ssh -oCompression=no sfe /usr/local/bin/ssh-proxy %h
+	ServerAliveInterval	5m
+	# Replace <NAS_login_name> with your NAS username
+	User	                aaschwan	
