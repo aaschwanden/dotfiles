@@ -13,9 +13,9 @@ alias cryomac='ssh -XY salbitschjien.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
 alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
 alias chinook="ssh -XY aaschwanden@chinook01.alaska.edu"
-alias pleiades="ssh -t aaschwan@pfe 'bash -l'"
-alias lou="ssh -t aaschwan@lou 'bash -l'"
-alias ldan="ssh -t aaschwan@ldan9 'bash -l'"
+alias pleiades="ssh -Y -t aaschwan@pfe 'bash -l'"
+alias lou="ssh -Y -t aaschwan@lou 'bash -l'"
+alias ldan="ssh -Y -t aaschwan@ldan9 'bash -l'"
 alias fish="ssh -XY aschwand@fish2.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
 alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
@@ -26,7 +26,7 @@ alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
 #export CXX=/opt/local/bin/openmpicxx
 
 export GDAL_DATA=/opt/local/share/gdal
-export PYTHONPATH=~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
+export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
 
 # PETSc stuff
 export PETSC_DIR=~/petsc
@@ -48,7 +48,16 @@ if [ -f /opt/local/etc/bash_completion ]; then
 export PISM_REVISION=testing
 export PISM_DO=echo
 
-# MacPorts Installer addition on 2015-10-27_at_11:21:17: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+
+
+
+##
+# Your previous /Users/andy/.profile file was backed up as /Users/andy/.profile.macports-saved_2016-08-10_at_16:10:12
+##
+
+# MacPorts Installer addition on 2016-08-10_at_16:10:12: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 

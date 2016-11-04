@@ -16,6 +16,9 @@ Hostname icebridge.sr.unh.edu
 User bmachuser
 Localforward 5433 localhost:5432
 
+Host sup.nas.nasa.gov sup-key.nas.nasa.gov
+     User aaschwan 
+
 #Host pfe pfe-last pfe.nas.nasa.gov pfe-last.nas.nasa.gov
 #ProxyCommand ssh aaschwan@sfe3.nas.nasa.gov /usr/local/bin/ssh-balance %h
 #HostKeyAlias pfe20.nas.nas.gov
