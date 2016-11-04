@@ -18,6 +18,7 @@ alias lou="ssh -t aaschwan@lou 'bash -l'"
 alias ldan="ssh -t aaschwan@ldan9 'bash -l'"
 alias fish="ssh -XY aschwand@fish2.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
+alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
 
 #alias mpirun='/opt/local/bin/openmpirun'
 #alias mpiexec='/opt/local/bin/openmpiexec'
@@ -34,7 +35,7 @@ export PETSC_ARCH=macosx
 #source ~/FEniCS/share/fenics/fenics.conf 
 
 # additional path
-export PATH=~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:~/pism/test:~/base/ice/util:/usr/texbin/:~/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql93/bin:$PATH
+export PATH=~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:~/pism/test:~/base/ice/util:/usr/texbin/:~/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql93/bin:/opt/local/libexec/qt4/bin:$PATH
 export XFILESEARCHPATH=/usr/X11R6/lib/X11/app-defaults/%N:/opt/local/lib/X11/appdefaults/%N
 
 # for bash completion
@@ -48,6 +49,15 @@ export PISM_REVISION=testing
 export PISM_DO=echo
 
 # MacPorts Installer addition on 2015-10-27_at_11:21:17: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+##
+# Your previous /Users/andy/.profile file was backed up as /Users/andy/.profile.macports-saved_2016-09-19_at_23:17:16
+##
+
+# MacPorts Installer addition on 2016-09-19_at_23:17:16: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
