@@ -26,7 +26,8 @@ alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
 #export CXX=/opt/local/bin/openmpicxx
 
 export GDAL_DATA=/opt/local/share/gdal
-export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
+# export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
+export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages
 
 # PETSc stuff
 export PETSC_DIR=~/petsc
