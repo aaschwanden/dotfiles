@@ -49,18 +49,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
 export PISM_REVISION=testing
 export PISM_DO=echo
 
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-
-
-
-
-##
-# Your previous /Users/andy/.profile file was backed up as /Users/andy/.profile.macports-saved_2016-08-10_at_16:10:12
-##
-
-# MacPorts Installer addition on 2016-08-10_at_16:10:12: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+export PATH="/Users/andy/Library/Python/2.7/bin:/opt/local/bin:/opt/local/sbin:$PATH"
 
 
 ##
@@ -68,6 +57,26 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 ##
 
 # MacPorts Installer addition on 2016-09-19_at_23:17:16: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# MacPorts Installer addition on 2017-02-21_at_16:50:38: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# MacPorts Installer addition on 2017-02-21_at_17:29:48: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# MacPorts Installer addition on 2017-02-21_at_18:10:02: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# MacPorts Installer addition on 2017-02-21_at_18:39:48: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
