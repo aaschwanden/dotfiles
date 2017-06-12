@@ -10,25 +10,26 @@
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (let (el-get-master-branch)
-      (goto-char (point-max))
-      (eval-print-last-sexp))))
+(progn
+  (require 'package)
+  (add-to-list 'package-archives
+               '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+  (package-initialize))
 
-(el-get 'sync)
 
 ; set latex mode to PDF
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
-)
+ '(package-selected-packages (quote (jedi auctex))))
 
 (setq-default indent-tabs-mode nil)
 
-(add-hook 'python-mode-hook 'jedi:setup)
-(autoload 'jedi:setup "jedi" nil t)
+;(add-hook 'python-mode-hook 'jedi:setup)
+;(autoload 'jedi:setup "jedi" nil t)
 
 (require 'reftex)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
@@ -80,3 +81,9 @@ for skipping in latex mode.")
     (goto-char start)))
 
 (global-unset-key (kbd "C-x C-c"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
