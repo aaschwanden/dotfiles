@@ -1,0 +1,16 @@
+! Make variable labels wider
+Ncview*varLabelWidth:    350
+
+! Reduce the number of variables per row (default: 4)
+Ncview*nVarsPerRow:    3
+
+! Do not mask out continents by default (only for lon,lat data)
+Ncview*autoOverlay:    0
+
+! Make the font smaller
+Ncview*font:            -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+
+Ncview*varColors:       0
+Ncview*foreground:      gray20
+Ncview*background:      LightSteelBlue
+Ncview*PlotXY_canvas*background: LightSteelBlue

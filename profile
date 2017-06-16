@@ -19,6 +19,8 @@ alias ldan="ssh -Y -t aaschwan@ldan9 'bash -l'"
 alias fish="ssh -XY aschwand@fish2.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
 alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
+alias mpicc=/opt/local/bin/mpicc-mpich-mp
+alias mpicxx=/opt/local/binmpicxx-mpich-mp
 
 #alias mpirun='/opt/local/bin/openmpirun'
 #alias mpiexec='/opt/local/bin/openmpiexec'

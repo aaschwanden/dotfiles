@@ -24,12 +24,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
- '(package-selected-packages (quote (jedi auctex))))
+ '(package-selected-packages (quote (## jedi auctex))))
 
 (setq-default indent-tabs-mode nil)
 
-;(add-hook 'python-mode-hook 'jedi:setup)
-;(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(autoload 'jedi:setup "jedi" nil t)
 
 (require 'reftex)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
