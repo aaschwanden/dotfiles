@@ -1,6 +1,3 @@
-# MacPorts Installer addition on 2013-06-12_at_11:28:59: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
 
 # alias
 alias em='emacs -nw -Q'
@@ -19,23 +16,19 @@ alias ldan="ssh -Y -t aaschwan@ldan9 'bash -l'"
 alias fish="ssh -XY aschwand@fish2.arsc.edu"
 alias idv="/Applications/IDV/runIDV"
 alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
-alias mpicc=/opt/local/bin/mpicc-mpich-mp
-alias mpicxx=/opt/local/binmpicxx-mpich-mp
 
-#alias mpirun='/opt/local/bin/openmpirun'
-#alias mpiexec='/opt/local/bin/openmpiexec'
-#export CC=/opt/local/bin/openmpicc
-#export CXX=/opt/local/bin/openmpicxx
+ulimit -S -n 2048
 
 export GDAL_DATA=/opt/local/share/gdal
-# export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python:$PYTHONPATH
-export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages
+export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python2.7/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/python
 
 # PETSc stuff
 export PETSC_DIR=~/petsc
 export PETSC_ARCH=macosx
 
-#source ~/FEniCS/share/fenics/fenics.conf 
+# MacPorts Installer addition on 2017-02-21_at_18:39:48: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
 
 # additional path
 export PATH=~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:~/pism/test:~/base/ice/util:/usr/texbin/:~/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql93/bin:/opt/local/libexec/qt4/bin:$PATH
@@ -47,58 +40,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
     fi
 
 
-# PISM related stuff
-export PISM_REVISION=testing
-export PISM_DO=echo
-
 export PATH="/Users/andy/Library/Python/2.7/bin:/opt/local/bin:/opt/local/sbin:$PATH"
 
 
-##
-# Your previous /Users/andy/.profile file was backed up as /Users/andy/.profile.macports-saved_2016-09-19_at_23:17:16
-##
-
-# MacPorts Installer addition on 2016-09-19_at_23:17:16: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_16:50:38: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_17:29:48: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_18:10:02: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_18:39:48: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_16:50:38: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_17:29:48: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_18:10:02: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2017-02-21_at_18:39:48: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
