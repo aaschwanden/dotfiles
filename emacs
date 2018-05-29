@@ -24,7 +24,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
- '(package-selected-packages (quote (## jedi auctex))))
+ '(package-selected-packages (quote (magit ## jedi auctex))))
 
 (setq-default indent-tabs-mode nil)
 
