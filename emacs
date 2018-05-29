@@ -36,6 +36,8 @@
 (add-hook 'latex-mode-hook 'turn-on-reftex)   ; with Emacs latex mode
 (put 'downcase-region 'disabled nil)
 
+(setq tramp-default-method "ssh")
+
 (defvar ispell-tex-skip-alists
   '((("%\\[" . "%\\]")
      ;; All the standard LaTeX keywords from L. Lamport's guide:
