@@ -89,3 +89,8 @@ for skipping in latex mode.")
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Tell emacs where is your personal elisp lib dir
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(load "blacken") ;; best not to include the ending “.el” or “.elc”
+(add-hook 'python-mode-hook 'blacken-mode)
