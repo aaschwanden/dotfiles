@@ -3,13 +3,6 @@ ForwardX11 yes
 Host *github.com
    ForwardX11 no
 
-Host pacman
-PubkeyAuthentication yes
-Hostname pacman.arsc.edu
-
-Host fish
-PubkeyAuthentication yes
-Hostname fish.arsc.edu
 
 Host icebridge 
 Hostname icebridge.sr.unh.edu

@@ -3,9 +3,8 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
 
-(setq default-frame-alist '((font . "Monaco-14")))
+(setq default-frame-alist '((font . "Monaco-16")))
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
 (setq exec-path (append exec-path '("/opt/local/bin")))
@@ -26,7 +25,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
- '(package-selected-packages (quote (magit ## jedi auctex))))
+ '(package-selected-packages '(magit ## jedi auctex))
+ '(safe-local-variable-values
+   '((eval c-set-offset 'innamespace 0)
+     (eval condition-case nil
+           (progn
+             (ws-butler-mode))
+           (error nil))
+     (eval progn
+           (add-to-list 'grep-find-ignored-files "*TAGS")
+           (add-to-list 'grep-find-ignored-files "*cpp.py")))))
 
 (setq-default indent-tabs-mode nil)
 
