@@ -14,6 +14,8 @@
 (setq exec-path (append exec-path '("~/Library/Python/3.6/bin")))
 (setenv "PATH" "~/Library/Python/3.6/bin:/opt/local/bin:/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 
+(c-set-offset 'innamespace 0)
+
 (progn
   (require 'package)
   (add-to-list 'package-archives
