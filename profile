@@ -8,13 +8,10 @@ alias lh='ls -lh'
 alias ipy='jupyter-qtconsole  &'
 alias cryomac='ssh -XY salbitschjien.gi.alaska.edu'
 alias marmaduke='ssh -XY aaschwanden@beauregard.gi.alaska.edu'
-alias pacman="ssh -XY aschwand@pacman3.arsc.edu"
-alias chinook="ssh -XY aaschwanden@chinook03.alaska.edu"
+alias chinook="ssh -XY aaschwanden@chinook02.alaska.edu"
 alias pleiades="ssh -Y -t aaschwan@pfe 'bash -l'"
 alias lou="ssh -Y -t aaschwan@lou 'bash -l'"
 alias ldan="ssh -Y -t aaschwan@ldan4 'bash -l'"
-alias fish="ssh -XY aschwand@fish2.arsc.edu"
-alias idv="/Applications/IDV/runIDV"
 alias sshiftc="sup shiftc --sync --clients=2 --remote=bbftp -r"
 
 ulimit -S -n 2048
