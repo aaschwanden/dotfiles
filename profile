@@ -22,7 +22,7 @@ export PETSC_ARCH=macosx
 export GEOSERVER_HOME=/usr/local/geoserver
 
 export GDAL_DATA=/opt/local/share/gdal
-export PYTHONPATH=~/python/site-packages:~/pism/util:~/pism/lib/python3.9/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/pythone:$PETSC_DIR/$PETSC_ARCH/lib:$PYTHONPATH
+export PYTHONPATH=/Users/andy/Library/Python/3.9/lib/python3.9/site-packages:~/python/site-packages:~/pism/util:~/pism/lib/python3.9/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/pythone:$PETSC_DIR/$PETSC_ARCH/lib:$PYTHONPATH
 
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
