@@ -110,6 +110,6 @@ for skipping in latex mode.")
  )
 
 ;; Tell emacs where is your personal elisp lib dir
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/lisp/blacken/")
 (load "blacken") ;; best not to include the ending “.el” or “.elc”
 (add-hook 'python-mode-hook 'blacken-mode)

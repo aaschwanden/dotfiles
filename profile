@@ -15,9 +15,9 @@ alias sshiftc="sup shiftc --sync --clients=2 -r"
 
 ulimit -S -n 2048
 
-export MACOSX_DEPLOYMENT_TARGET=10.15
+export MACOSX_DEPLOYMENT_TARGET=12.0.1
 # PETSc stuff
-export PETSC_DIR=~/petsc
+export PETSC_DIR=$HOME/petsc
 export PETSC_ARCH=macosx
 export GEOSERVER_HOME=/usr/local/geoserver
 
