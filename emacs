@@ -15,7 +15,7 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
 (setq exec-path (append exec-path '("/opt/local/bin")))
-(setq exec-path (append exec-path '("~/Library/Python/3.9/bin")))
+(setq exec-path (append exec-path '("~/Library/Python/3.10/bin")))
 (setenv "PATH" "~/Library/Python/3.9/bin:/opt/local/bin:/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 
 (c-set-offset 'innamespace 0)
