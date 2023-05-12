@@ -2,9 +2,14 @@
 
 (desktop-save-mode 1)
 
+(require 'use-package)
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -15,8 +20,8 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (setq exec-path (append exec-path '("/Library/TeX/texbin")))
 (setq exec-path (append exec-path '("/opt/local/bin")))
-(setq exec-path (append exec-path '("~/Library/Python/3.10/bin")))
-(setenv "PATH" "~/Library/Python/3.9/bin:/opt/local/bin:/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
+(setq exec-path (append exec-path '("~/Library/Python/3.11/bin")))
+(setenv "PATH" "~/Library/Python/3.11/bin:/opt/local/bin:/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 
 (c-set-offset 'innamespace 0)
 
@@ -108,8 +113,9 @@ for skipping in latex mode.")
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+ 
 
-;; Tell emacs where is your personal elisp lib dir
-(add-to-list 'load-path "~/.emacs.d/lisp/blacken/")
-(load "blacken") ;; best not to include the ending “.el” or “.elc”
-(add-hook 'python-mode-hook 'blacken-mode)
+(use-package python-black
+  :demand t
+  :after python
+  :hook (python-mode . python-black-on-save-mode-enable-dwim))

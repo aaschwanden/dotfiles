@@ -14,22 +14,22 @@ alias ldan="ssh -Y -t aaschwan@ldan4 'bash -l'"
 alias sshiftc="sup shiftc --sync --clients=2 -r"
 
 ulimit -S -n 2048
+export HDF5_USE_FILE_LOCKING=FALSE
 
-export MACOSX_DEPLOYMENT_TARGET=12.0.1
+
 # PETSc stuff
 export PETSC_DIR=$HOME/petsc
 export PETSC_ARCH=macosx
-export GEOSERVER_HOME=/usr/local/geoserver
 
 export GDAL_DATA=/opt/local/share/gdal
-export PYTHONPATH=/Users/andy/Library/Python/3.9/lib/python3.9/site-packages:~/python/site-packages:~/pism/util:~/pism/lib/python3.9/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/pythone:$PETSC_DIR/$PETSC_ARCH/lib:$PYTHONPATH
+export PYTHONPATH=/Users/andy/Library/Python/3.11/lib/python/site-packages/:~/python/site-packages:~/pism/util:~/pism/lib/python3.11/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/pythone:$PETSC_DIR/$PETSC_ARCH/lib:$PYTHONPATH
 
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # additional path
-export PATH=~/Library/Python/3.10/bin:~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:/usr/texbin/:~/bin:$PATH
+export PATH=~/Library/Python/3.11/bin:~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:/usr/texbin/:~/bin:$PATH
 export XFILESEARCHPATH=/usr/X11R6/lib/X11/app-defaults/%N:/opt/local/lib/X11/appdefaults/%N
 
 # for bash completion
@@ -40,7 +40,6 @@ if [ -f /opt/local/etc/bash_completion ]; then
 
 
 
-# Setting PATH for Python 3.9
 # The original version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:/Users/andy/Library/Python/3.9/bin:${PATH}"
+PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:/Users/andy/Library/Python/3.11/bin:${PATH}"
 export PATH
