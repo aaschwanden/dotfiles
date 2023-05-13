@@ -7,9 +7,6 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-;; and `package-pinned-packages`. Most users will not need or want to do this.
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -25,11 +22,6 @@
 
 (c-set-offset 'innamespace 0)
 
-(progn
-  (require 'package)
-  (add-to-list 'package-archives
-               '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-  (package-initialize))
 
 
 ; set latex mode to PDF
@@ -39,7 +31,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
- '(package-selected-packages '(magit ## jedi auctex))
+ '(package-selected-packages '(python-black magit ## jedi auctex))
  '(safe-local-variable-values
    '((eval c-set-offset 'innamespace 0)
      (eval condition-case nil
@@ -53,6 +45,7 @@
 (setq-default indent-tabs-mode nil)
 
 (add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t) 
 (autoload 'jedi:setup "jedi" nil t)
 
 (require 'reftex)
