@@ -40,7 +40,9 @@
            (error nil))
      (eval progn
            (add-to-list 'grep-find-ignored-files "*TAGS")
-           (add-to-list 'grep-find-ignored-files "*cpp.py")))))
+           (add-to-list 'grep-find-ignored-files "*cpp.py"))))
+ '(warning-suppress-log-types '((comp)))
+ '(warning-suppress-types '((comp))))
 
 (setq-default indent-tabs-mode nil)
 
