@@ -1,5 +1,51 @@
 ;; Save desktop state (see http://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Emacs-Sessions.html)
 
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(use-package copilot
+  :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el"))
+  :ensure t)
+;; you can utilize :map :hook and :config to customize copilot
+
+
+(defun rk/copilot-tab ()
+  "Tab command that will complet with copilot if a completion is
+available. Otherwise will try company, yasnippet or normal
+tab-indent."
+  (interactive)
+  (or (copilot-accept-completion)
+      (company-yasnippet-or-completion)
+      (indent-for-tab-command)))
+
+(define-key global-map (kbd "<tab>") #'rk/copilot-tab)
+
+(defun rk/copilot-complete-or-accept ()
+  "Command that either triggers a completion or accepts one if one
+is available. Useful if you tend to hammer your keys like I do."
+  (interactive)
+  (if (copilot--overlay-visible)
+      (progn
+        (copilot-accept-completion)
+        (open-line 1)
+        (next-line))
+    (copilot-complete)))
+
+(define-key copilot-mode-map (kbd "M-C-<next>") #'copilot-next-completion)
+(define-key copilot-mode-map (kbd "M-C-<prior>") #'copilot-previous-completion)
+(define-key copilot-mode-map (kbd "M-C-<right>") #'copilot-accept-completion-by-word)
+(define-key copilot-mode-map (kbd "M-C-<down>") #'copilot-accept-completion-by-line)
+(define-key global-map (kbd "M-C-<return>") #'rk/copilot-complete-or-accept)
 (desktop-save-mode 1)
 
 (require 'use-package)
@@ -31,7 +77,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
- '(package-selected-packages '(python-black magit ## jedi auctex))
+ '(copilot-node-executable "/usr/local/bin/node")
+ '(package-selected-packages
+   '(editorconfig toml python-isort python-pytest python-docstring python-black magit ## jedi auctex))
  '(safe-local-variable-values
    '((eval c-set-offset 'innamespace 0)
      (eval condition-case nil

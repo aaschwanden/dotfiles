@@ -1,0 +1,27 @@
+
+
+# PETSc stuff
+export PETSC_DIR=$HOME/petsc
+export PETSC_ARCH=macosx
+
+export HDF5_USE_FILE_LOCKING=FALSE
+
+export GDAL_DATA=/opt/local/share/gdal
+export PYTHONPATH=/Users/andy/Library/Python/3.11/lib/python/site-packages/:~/python/site-packages:~/pism/util:~/pism/lib/python3.11/site-packages:/Applications/MacPorts/QGIS.app/Contents/Resources/pythone:$PETSC_DIR/$PETSC_ARCH/lib:$PYTHONPATH
+
+
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# additional path
+export PATH=~/Library/Python/3.11/bin:~/local/bin:$PETSC_DIR/$PETSC_ARCH/bin/:~/pism/bin:~/pism/util:/usr/texbin/:~/bin:$PATH
+export XFILESEARCHPATH=/usr/X11R6/lib/X11/app-defaults/%N:/opt/local/lib/X11/appdefaults/%N
+
+# for bash completion
+if [ -f /opt/local/etc/bash_completion ]; then
+        . /opt/local/etc/bash_completion
+    fi
+
+# The original version is saved in .profile.pysave
+PATH="${HOME}/bin:$HOME/Library/Python/3.11/bin:/Library/TeX/texbin/:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Users/andy/Library/Python/3.11/bin:${PATH}"
+export PATH
