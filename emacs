@@ -28,18 +28,6 @@ tab-indent."
       (company-yasnippet-or-completion)
       (indent-for-tab-command)))
 
-(define-key global-map (kbd "<tab>") #'rk/copilot-tab)
-
-(defun rk/copilot-complete-or-accept ()
-  "Command that either triggers a completion or accepts one if one
-is available. Useful if you tend to hammer your keys like I do."
-  (interactive)
-  (if (copilot--overlay-visible)
-      (progn
-        (copilot-accept-completion)
-        (open-line 1)
-        (next-line))
-    (copilot-complete)))
 
 (define-key copilot-mode-map (kbd "M-C-<next>") #'copilot-next-completion)
 (define-key copilot-mode-map (kbd "M-C-<prior>") #'copilot-previous-completion)

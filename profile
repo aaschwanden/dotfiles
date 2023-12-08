@@ -18,13 +18,8 @@ export HDF5_USE_FILE_LOCKING=FALSE
 
 alias env_ports='. $HOME/base/dotfiles/profile_ports'
 alias env_brew='. $HOME/base/dotfiles/profile_brew'
+alias env_conda='. $HOME/base/dotfiles/profile_conda'
 
 export PISM_PREFIX=$HOME/pism
-##
-# Your previous /Users/andy/.profile file was backed up as /Users/andy/.profile.macports-saved_2023-10-25_at_17:15:39
-##
 
-# MacPorts Installer addition on 2023-10-25_at_17:15:39: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
