@@ -22,4 +22,4 @@ alias env_conda='. $HOME/base/dotfiles/profile_conda'
 
 export PISM_PREFIX=$HOME/pism
 
-
+export SDKROOT=$(xcrun --show-sdk-path)

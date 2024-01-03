@@ -16,7 +16,7 @@ export HDF5_USE_FILE_LOCKING=FALSE
 
 unset PETSC_DIR
 unset PETSC_ARCH
-unset PYTHON_PATH
+unset PYTHONPATH
 
 env=pism
 
